@@ -1,0 +1,9 @@
+sudo: requires
+services:
+  - docker
+
+before_install:
+  - docker build -t tomeralony/docker-react-aws -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true tomeralony/docker-react-aws npm run test
