@@ -1,4 +1,5 @@
 sudo: requires
+language: generic
 services:
   - docker
 
